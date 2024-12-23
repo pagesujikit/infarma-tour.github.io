@@ -119,7 +119,7 @@
 
   function appendArmadaData() {
     const contact =
-      'https://api.whatsapp.com/send/?phone=6281331402031&text=Halo+Wijaya+Trans&type=phone_number&app_absent=0';
+      'https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+Infarma+Tour&type=phone_number&app_absent=0';
 
     const keterangan = [
       'Sudah termasuk Driver',
@@ -263,4 +263,83 @@
     }
   }
   appendArmadaData();
+
+  function appenddocumentaryPackageData() {
+    const contact =
+      'https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+Infarma+Tour&type=phone_number&app_absent=0';
+
+    const keterangan = ['1 Hari'];
+
+    let data = [
+      {
+        image: 'images/documentary/drone-dji.jpg',
+        carType: {
+          brandName: 'Drone DJI Mini 4 Pro',
+          factoryName: ''
+        },
+        price: 'Rp.950.000,-',
+        contact,
+        keterangan: [...keterangan, 'Foto', 'Video']
+      },
+      {
+        image: 'images/documentary/mirrorless-camera.jpg',
+        carType: {
+          brandName: 'Mirrorless Camera',
+          factoryName: ''
+        },
+        price: 'Rp.399.000,-',
+        contact,
+        keterangan: [...keterangan]
+      }
+    ];
+
+    for (let index = 0; index < data.length; index++) {
+      $('#documentary-package').append(`
+			<div class="col-lg-4 col-sm-6 mb-5">
+			  <div class="card">
+				<img
+				  loading="lazy"
+				  src="${data[index].image}"
+				  alt="img"
+				  class="card-img-top"
+				  style="width: auto"
+				/>
+				<div class="card-body">
+				  <h4 class="card-title">${data[index].carType.brandName}</h4>
+				  <p class="card-text" style="margin-bottom: 20px">
+				  ${data[index].keterangan
+            .map(
+              item => `
+					  <a class="link">
+						<div class="text-left" style="display: flex; padding-bottom: 10px">
+						  <a style="margin-right:10px">✓</a>
+						  <a style="word-break: keep-all">${item}</a>
+						</div>
+					  </a>
+					`
+            )
+            .join('')}
+				  </p>
+				  <div style="border: 1px solid #f2f2f2">
+				  </div>
+				  <div class="col" style="margin-top: 10px">
+					<p style="">Harga Mulai</p>
+					<p style="font-size: 20px; font-weight: bold; margin-top: -20px;"
+					  >${data[index].price}
+					</p>
+				  </div>
+				  <a id="whatsapp-kami" class="btn btn-primary btn-sm">Hubungi Kami</a>
+				</div>
+			  </div>
+			</div>
+		  `);
+    }
+  }
+  appenddocumentaryPackageData();
+
+  $(document).on('click', '#whatsapp-kami', function () {
+    window.open(
+      'https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+Infarma+Tour&type=phone_number&app_absent=0'
+    );
+  });
 })(jQuery);
