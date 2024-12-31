@@ -8,6 +8,20 @@
 (function ($) {
   'use strict';
 
+  // malang
+  const SLUG_CITY_TOUR_BATU = 'city_tour_batu';
+  const SLUG_CITY_TOUR_MALANG = 'city_tour_malang';
+  const SLUG_GUNUNG_BROMO = 'gunung_bromo';
+  const SLUG_PANTAI_3_WARNA = 'pantai_3_warna';
+  const SLUG_PANTAI_MALANG_SELATAN = 'pantai_malang_selatan';
+  const SLUG_TUMPAK_SEWU = 'tumpak_sewu';
+
+  // yogyakarta
+  const SLUG_PAKET_A = 'paket_a';
+  const SLUG_PAKET_B = 'paket_b';
+  const SLUG_PAKET_C = 'paket_c';
+  const SLUG_PAKET_D = 'paket_d';
+
   // Preloader js
   $(window).on('load', function () {
     $('.preloader').fadeOut(700);
@@ -116,6 +130,13 @@
   });
 
   // customs
+
+  function capitalizeFirstLetter(string) {
+    return string
+      .split(' ') // Split the string into an array of words
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Uppercase first letter of each word
+      .join(' '); // Join the words back into a string
+  }
 
   function appendArmadaData() {
     const contact =
@@ -263,6 +284,152 @@
     }
   }
   appendArmadaData();
+
+  function appendtripPackageData() {
+    const contact =
+      'https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+Infarma+Tour&type=phone_number&app_absent=0';
+
+    const benefits = [
+      'Mobil + Parkir',
+      'BBM',
+      'Tiket Wisata',
+      'Welcome Drink',
+      'Driver'
+    ];
+
+    let data = [
+      {
+        image: `images/trip/malang.png`,
+        carType: {
+          brandName: 'Malang',
+          factoryName: ''
+        },
+        price: 'Rp.950.000,-',
+        contact,
+        description: {
+          long: 'Kami akan menemani perjalanan anda untuk menjelajahi keindahan kota Malang, yang dikenal dengan udara sejuk, pemandangan alam yang memukau, dan kekayaan budaya. Paket wisata ini dirancang untuk menghadirkan pengalaman terbaik di Malang, menggabungkan keindahan alam, situs sejarah, dan pengalaman lokal. Saat ini tersedia beberapa destinasi yang kami tawarkan seperti'
+        },
+        destination: [
+          {
+            name: SLUG_CITY_TOUR_BATU,
+            price: 'Rp 320.000,-',
+            benefits: [...benefits]
+          },
+          {
+            name: SLUG_CITY_TOUR_MALANG,
+            price: 'Rp 320.000,-',
+            benefits: [...benefits]
+          },
+          {
+            name: SLUG_GUNUNG_BROMO,
+            price: 'Rp 250.000,-',
+            benefits: ['Jeep', ...benefits]
+          },
+          {
+            name: SLUG_PANTAI_3_WARNA,
+            price: 'Rp 225.000,-',
+            benefits: ['Guide', 'Alat Snorkling', ...benefits]
+          },
+          {
+            name: SLUG_PANTAI_MALANG_SELATAN,
+            price: 'Rp 225.000,-',
+            benefits: ['Kursi dan Meja Portable', ...benefits]
+          },
+          {
+            name: SLUG_TUMPAK_SEWU,
+            price: 'Rp 225.000,-',
+            benefits: ['Guide', 'Dokumentasi by IPhone', ...benefits]
+          }
+        ],
+        keterangan: [
+          SLUG_CITY_TOUR_BATU,
+          SLUG_CITY_TOUR_MALANG,
+          SLUG_GUNUNG_BROMO,
+          SLUG_PANTAI_3_WARNA,
+          SLUG_PANTAI_MALANG_SELATAN,
+          SLUG_TUMPAK_SEWU
+        ]
+      },
+      {
+        image: `images/trip/yogyakarta.png`,
+        carType: {
+          brandName: 'Yogyakarta',
+          factoryName: ''
+        },
+        price: 'Rp.399.000,-',
+        contact,
+        description: {
+          long: 'Jelajahi pesona kota Yogyakarta dengan paket wisata yang dirancang untuk memberikan pengalaman tak terlupakan. Anda akan diajak menikmati keindahan alam dan kekayaan budaya. Paket ini memastikan setiap momen perjalanan anda menjadi kenangan yang tak terlupakan. Saat ini tersedia beberapa destinasi yang kami tawarkan seperti'
+        },
+        destination: [
+          {
+            name: SLUG_PAKET_A,
+            price: 'Rp 399.000,-',
+            benefits: ['Jeep', ...benefits]
+          },
+          {
+            name: SLUG_PAKET_B,
+            price: 'Rp 299.000,-',
+            benefits: [...benefits]
+          },
+          {
+            name: SLUG_PAKET_C,
+            price: 'Rp 299.000,-',
+            benefits: [...benefits]
+          },
+          {
+            name: SLUG_PAKET_D,
+            price: 'Rp 399.000,-',
+            benefits: ['Jeep', ...benefits]
+          }
+        ],
+        keterangan: [SLUG_PAKET_A, SLUG_PAKET_B, SLUG_PAKET_C, SLUG_PAKET_D]
+      }
+    ];
+
+    for (let index = 0; index < data.length; index++) {
+      const encodedString = encodeURIComponent(JSON.stringify(data[index]));
+
+      $('#trip-package').append(`
+			<div class="col-lg-4 col-sm-6 mb-5">
+			  <div class="card">
+				<img
+				  loading="lazy"
+				  src="${data[index].image}"
+				  alt="img"
+				  class="card-img-top"
+				  style="width: auto"
+				/>
+				<div class="card-body">
+				  <h4 class="card-title">${data[index].carType.brandName}</h4>
+				  <p class="card-text" style="margin-bottom: 20px">
+				  ${data[index].keterangan
+            .map(
+              item => `
+					  <a class="link">
+						<div class="text-left" style="display: flex; padding-bottom: 10px">
+						  <a style="margin-right:10px">✓</a>
+						  <a style="word-break: keep-all">${capitalizeFirstLetter(
+                item.replace(/\_/gi, ' ')
+              )}</a>
+						</div>
+					  </a>
+					`
+            )
+            .join('')}
+				  </p>
+				  <div style="border: 1px solid #f2f2f2">
+				  </div>
+          <div style="margin-top: 10px">
+				    <a id="lihat-paket-trip" class="btn btn-primary btn-sm btn-block" target="_blank" href="trip-package-list.html?tripPackagesData=${encodedString}">Lihat Paket</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  `);
+    }
+  }
+  appendtripPackageData();
 
   function appenddocumentaryPackageData() {
     const contact =
