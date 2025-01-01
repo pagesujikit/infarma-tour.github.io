@@ -17,10 +17,10 @@
   const SLUG_TUMPAK_SEWU = 'tumpak_sewu';
 
   // yogyakarta
-  const SLUG_PAKET_A = 'paket_a';
-  const SLUG_PAKET_B = 'paket_b';
-  const SLUG_PAKET_C = 'paket_c';
-  const SLUG_PAKET_D = 'paket_d';
+  const SLUG_PAKET_A = 'yogyakarta_paket_a';
+  const SLUG_PAKET_B = 'yogyakarta_paket_b';
+  const SLUG_PAKET_C = 'yogyakarta_paket_c';
+  const SLUG_PAKET_D = 'yogyakarta_paket_d';
 
   // Preloader js
   $(window).on('load', function () {
@@ -238,6 +238,16 @@
         price: 'Rp.2.500.000,-',
         contact,
         keterangan: [...keterangan]
+      },
+      {
+        image: 'images/car-catalog/bus.jpg',
+        carType: {
+          brandName: 'Bus',
+          factoryName: ''
+        },
+        price: 'Rp.2.000.000,-',
+        contact,
+        keterangan: [...keterangan]
       }
     ];
 
@@ -313,32 +323,38 @@
           {
             name: SLUG_CITY_TOUR_BATU,
             price: 'Rp 320.000,-',
-            benefits: [...benefits]
+            benefits: [...benefits],
+            city: 'Malang'
           },
           {
             name: SLUG_CITY_TOUR_MALANG,
             price: 'Rp 320.000,-',
-            benefits: [...benefits]
+            benefits: [...benefits],
+            city: 'Malang'
           },
           {
             name: SLUG_GUNUNG_BROMO,
             price: 'Rp 250.000,-',
-            benefits: ['Jeep', ...benefits]
+            benefits: ['Jeep', ...benefits],
+            city: 'Malang'
           },
           {
             name: SLUG_PANTAI_3_WARNA,
             price: 'Rp 225.000,-',
-            benefits: ['Guide', 'Alat Snorkling', ...benefits]
+            benefits: ['Guide', 'Alat Snorkling', ...benefits],
+            city: 'Malang'
           },
           {
             name: SLUG_PANTAI_MALANG_SELATAN,
             price: 'Rp 225.000,-',
-            benefits: ['Kursi dan Meja Portable', ...benefits]
+            benefits: ['Kursi dan Meja Portable', ...benefits],
+            city: 'Malang'
           },
           {
             name: SLUG_TUMPAK_SEWU,
             price: 'Rp 225.000,-',
-            benefits: ['Guide', 'Dokumentasi by IPhone', ...benefits]
+            benefits: ['Guide', 'Dokumentasi by IPhone', ...benefits],
+            city: 'Malang'
           }
         ],
         keterangan: [
@@ -365,68 +381,81 @@
           {
             name: SLUG_PAKET_A,
             price: 'Rp 399.000,-',
-            benefits: ['Jeep', ...benefits]
+            benefits: ['Jeep', ...benefits],
+            city: 'Yogyakarta'
           },
           {
             name: SLUG_PAKET_B,
             price: 'Rp 299.000,-',
-            benefits: [...benefits]
+            benefits: [...benefits],
+            city: 'Yogyakarta'
           },
           {
             name: SLUG_PAKET_C,
             price: 'Rp 299.000,-',
-            benefits: [...benefits]
+            benefits: [...benefits],
+            city: 'Yogyakarta'
           },
           {
             name: SLUG_PAKET_D,
             price: 'Rp 399.000,-',
-            benefits: ['Jeep', ...benefits]
+            benefits: ['Jeep', ...benefits],
+            city: 'Yogyakarta'
           }
         ],
         keterangan: [SLUG_PAKET_A, SLUG_PAKET_B, SLUG_PAKET_C, SLUG_PAKET_D]
       }
     ];
 
-    for (let index = 0; index < data.length; index++) {
-      const encodedString = encodeURIComponent(JSON.stringify(data[index]));
+    const tripShownByHomeScreen = [
+      ...data[0].destination,
+      ...data[1].destination
+    ];
+
+    for (let index = 0; index < tripShownByHomeScreen.length; index++) {
+      const item = tripShownByHomeScreen[index];
 
       $('#trip-package').append(`
-			<div class="col-lg-4 col-sm-6 mb-5">
-			  <div class="card">
-				<img
-				  loading="lazy"
-				  src="${data[index].image}"
-				  alt="img"
-				  class="card-img-top"
-				  style="width: auto"
-				/>
-				<div class="card-body">
-				  <h4 class="card-title">${data[index].carType.brandName}</h4>
-				  <p class="card-text" style="margin-bottom: 20px">
-				  ${data[index].keterangan
-            .map(
-              item => `
-					  <a class="link">
-						<div class="text-left" style="display: flex; padding-bottom: 10px">
-						  <a style="margin-right:10px">✓</a>
-						  <a style="word-break: keep-all">${capitalizeFirstLetter(
-                item.replace(/\_/gi, ' ')
-              )}</a>
-						</div>
-					  </a>
-					`
-            )
-            .join('')}
-				  </p>
-				  <div style="border: 1px solid #f2f2f2">
-				  </div>
-          <div style="margin-top: 10px">
-				    <a id="lihat-paket-trip" class="btn btn-primary btn-sm btn-block" target="_blank" href="trip-package-list.html?tripPackagesData=${encodedString}">Lihat Paket</a>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  `);
+    <div class="col-lg-4 col-sm-6 mb-5">
+      <div class="card">
+      <img
+        loading="lazy"
+        src="images/trip/${item.city.toLowerCase()}/${item.name}/1.jpeg"
+        alt="img"
+        class="card-img-top"
+        style="width: auto"
+      />
+      <div class="card-body">
+        <h4 class="card-title">${capitalizeFirstLetter(
+          item.name.replace(/\_/gi, ' ')
+        )}</h4>
+        <p class="card-text" style="margin-bottom: 20px">
+        ${item.benefits
+          .map(
+            item => `
+          <a class="link">
+          <div class="text-left" style="display: flex; padding-bottom: 10px">
+            <a style="margin-right:10px">✓</a>
+            <a style="word-break: keep-all">${item}</a>
+          </div>
+          </a>
+        `
+          )
+          .join('')}
+        </p>
+        <div style="border: 1px solid #f2f2f2">
+        </div>
+        <div class="col" style="margin-top: 10px">
+        <p style="">Harga Mulai</p>
+        <p style="font-size: 20px; font-weight: bold; margin-top: -20px;"
+          >${item.price}
+        </p>
+        </div>
+        <a id="lihat-paket-trip" class="btn btn-primary btn-sm" target="_blank" href="https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+Infarma+Tour&type=phone_number&app_absent=0">Hubungi kami</a>
+      </div>
+      </div>
+    </div>
+    `);
     }
   }
   appendtripPackageData();
