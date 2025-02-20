@@ -309,7 +309,7 @@
 
     let data = [
       {
-        image: `images/trip/malang.png`,
+        image: `images/trip/malang.jpg`,
         carType: {
           brandName: 'Malang',
           factoryName: ''
@@ -367,7 +367,7 @@
         ]
       },
       {
-        image: `images/trip/yogyakarta.png`,
+        image: `images/trip/yogyakarta.jpg`,
         carType: {
           brandName: 'Yogyakarta',
           factoryName: ''
