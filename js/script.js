@@ -328,13 +328,13 @@
           },
           {
             name: SLUG_CITY_TOUR_MALANG,
-            price: 'Rp 320.000,-',
+            price: 'Rp 199.000,-',
             benefits: [...benefits],
             city: 'Malang'
           },
           {
             name: SLUG_GUNUNG_BROMO,
-            price: 'Rp 250.000,-',
+            price: 'Rp 350.000,-',
             benefits: ['Jeep', ...benefits],
             city: 'Malang'
           },
@@ -352,7 +352,7 @@
           },
           {
             name: SLUG_TUMPAK_SEWU,
-            price: 'Rp 225.000,-',
+            price: 'Rp 299.000,-',
             benefits: ['Guide', 'Dokumentasi by IPhone', ...benefits],
             city: 'Malang'
           }
