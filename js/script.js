@@ -10,17 +10,20 @@
 
   // malang
   const SLUG_CITY_TOUR_BATU = 'city_tour_batu';
-  const SLUG_CITY_TOUR_MALANG = 'city_tour_malang';
+  const SLUG_CITY_TOUR_MALANG_BATU = 'city_tour_malang_batu';
   const SLUG_GUNUNG_BROMO = 'gunung_bromo';
   const SLUG_PANTAI_3_WARNA = 'pantai_3_warna';
   const SLUG_PANTAI_MALANG_SELATAN = 'pantai_malang_selatan';
   const SLUG_TUMPAK_SEWU = 'tumpak_sewu';
 
   // yogyakarta
-  const SLUG_PAKET_A = 'yogyakarta_paket_a';
-  const SLUG_PAKET_B = 'yogyakarta_paket_b';
-  const SLUG_PAKET_C = 'yogyakarta_paket_c';
-  const SLUG_PAKET_D = 'yogyakarta_paket_d';
+  const SLUG_PAKET_1 = 'yogyakarta_paket_1';
+  const SLUG_PAKET_2 = 'yogyakarta_paket_2';
+  const SLUG_PAKET_3 = 'yogyakarta_paket_3';
+  const SLUG_PAKET_4 = 'yogyakarta_paket_4';
+  const SLUG_PAKET_5 = 'yogyakarta_paket_5';
+  const SLUG_PAKET_6 = 'yogyakarta_paket_6';
+  const SLUG_PAKET_7 = 'yogyakarta_paket_7';
 
   // Preloader js
   $(window).on('load', function () {
@@ -307,6 +310,15 @@
       'Driver'
     ];
 
+    const benefitsOfYogyakarta = [
+      'Private Transport Pariwisata',
+      'Tiket Masuk Wisata (WNI)',
+      'Driver Professional',
+      'BBM',
+      'Free Parkir',
+      'Welcome Drink'
+    ];
+
     let data = [
       {
         image: `images/trip/malang.jpg`,
@@ -320,14 +332,14 @@
           long: 'Kami akan menemani perjalanan anda untuk menjelajahi keindahan kota Malang, yang dikenal dengan udara sejuk, pemandangan alam yang memukau, dan kekayaan budaya. Paket wisata ini dirancang untuk menghadirkan pengalaman terbaik di Malang, menggabungkan keindahan alam, situs sejarah, dan pengalaman lokal. Saat ini tersedia beberapa destinasi yang kami tawarkan seperti'
         },
         destination: [
+          // {
+          //   name: SLUG_CITY_TOUR_BATU,
+          //   price: 'Rp 320.000,-',
+          //   benefits: [...benefits],
+          //   city: 'Malang'
+          // },
           {
-            name: SLUG_CITY_TOUR_BATU,
-            price: 'Rp 320.000,-',
-            benefits: [...benefits],
-            city: 'Malang'
-          },
-          {
-            name: SLUG_CITY_TOUR_MALANG,
+            name: SLUG_CITY_TOUR_MALANG_BATU,
             price: 'Rp 199.000,-',
             benefits: [...benefits],
             city: 'Malang'
@@ -358,8 +370,8 @@
           }
         ],
         keterangan: [
-          SLUG_CITY_TOUR_BATU,
-          SLUG_CITY_TOUR_MALANG,
+          // SLUG_CITY_TOUR_BATU,
+          SLUG_CITY_TOUR_MALANG_BATU,
           SLUG_GUNUNG_BROMO,
           SLUG_PANTAI_3_WARNA,
           SLUG_PANTAI_MALANG_SELATAN,
@@ -379,31 +391,49 @@
         },
         destination: [
           {
-            name: SLUG_PAKET_A,
+            name: SLUG_PAKET_1,
             price: 'Rp 399.000,-',
-            benefits: ['Jeep', ...benefits],
+            benefits: ['Private Jeep', ...benefitsOfYogyakarta],
             city: 'Yogyakarta'
           },
           {
-            name: SLUG_PAKET_B,
+            name: SLUG_PAKET_2,
+            price: 'Rp 229.000,-',
+            benefits: [...benefitsOfYogyakarta],
+            city: 'Yogyakarta'
+          },
+          {
+            name: SLUG_PAKET_3,
             price: 'Rp 299.000,-',
-            benefits: [...benefits],
+            benefits: [...benefitsOfYogyakarta],
             city: 'Yogyakarta'
           },
           {
-            name: SLUG_PAKET_C,
-            price: 'Rp 299.000,-',
-            benefits: [...benefits],
-            city: 'Yogyakarta'
-          },
-          {
-            name: SLUG_PAKET_D,
+            name: SLUG_PAKET_4,
             price: 'Rp 399.000,-',
-            benefits: ['Jeep', ...benefits],
+            benefits: ['Jeep', ...benefitsOfYogyakarta],
+            city: 'Yogyakarta'
+          },
+          {
+            name: SLUG_PAKET_5,
+            price: 'Rp 259.000,-',
+            benefits: [...benefitsOfYogyakarta],
+            city: 'Yogyakarta'
+          },
+          {
+            name: SLUG_PAKET_6,
+            price: 'Rp 389.000,-',
+            benefits: ['Private VW Safari', ...benefitsOfYogyakarta],
+            city: 'Yogyakarta'
+          },
+          {
+            name: SLUG_PAKET_7,
+            price: 'Rp 239.000,-',
+            benefits: ['Jeep', ...benefitsOfYogyakarta],
             city: 'Yogyakarta'
           }
         ],
-        keterangan: [SLUG_PAKET_A, SLUG_PAKET_B, SLUG_PAKET_C, SLUG_PAKET_D]
+        keterangan: [SLUG_PAKET_1, SLUG_PAKET_2, SLUG_PAKET_3, SLUG_PAKET_4]
       }
     ];
 
