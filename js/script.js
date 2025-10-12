@@ -568,4 +568,8 @@
       'https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+Infarma+Tour&type=phone_number&app_absent=0'
     );
   });
+
+  $(document).ready(function () {
+    $('#footer-placeholder').load('footer.html');
+  });
 })(jQuery);
