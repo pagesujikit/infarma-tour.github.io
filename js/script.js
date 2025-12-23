@@ -143,7 +143,7 @@
 
   function appendArmadaData() {
     const contact =
-      'https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+Infarma+Tour&type=phone_number&app_absent=0';
+      'https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+mainbareng.id&type=phone_number&app_absent=0';
 
     const keterangan = [
       'Sudah termasuk Driver',
@@ -300,7 +300,7 @@
 
   function appendtripPackageData() {
     const contact =
-      'https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+Infarma+Tour&type=phone_number&app_absent=0';
+      'https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+mainbareng.id&type=phone_number&app_absent=0';
 
     const benefits = [
       'Mobil + Parkir',
@@ -481,7 +481,7 @@
           >${item.price}
         </p>
         </div>
-        <a id="lihat-paket-trip" class="btn btn-primary btn-sm" target="_blank" href="https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+Infarma+Tour&type=phone_number&app_absent=0">Hubungi kami</a>
+        <a id="lihat-paket-trip" class="btn btn-primary btn-sm" target="_blank" href="https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+mainbareng.id&type=phone_number&app_absent=0">Hubungi kami</a>
       </div>
       </div>
     </div>
@@ -492,7 +492,7 @@
 
   function appenddocumentaryPackageData() {
     const contact =
-      'https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+Infarma+Tour&type=phone_number&app_absent=0';
+      'https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+mainbareng.id&type=phone_number&app_absent=0';
 
     const keterangan = ['1 Hari'];
 
@@ -565,7 +565,7 @@
 
   $(document).on('click', '#whatsapp-kami', function () {
     window.open(
-      'https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+Infarma+Tour&type=phone_number&app_absent=0'
+      'https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+mainbareng.id&type=phone_number&app_absent=0'
     );
   });
 
