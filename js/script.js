@@ -587,7 +587,7 @@
       const item = data[index];
 
       $('#testimoni-pelanggan-list-info').append(`
-        <div class="col-6 col-lg-4 mb-5">
+        <div class="col-12 col-lg-4 mb-5">
           <div class="card p-0 border-primary rounded-0 hover-shadow">
             <div class="card-body">
               <div class="col-12 mb-4 text-center">
