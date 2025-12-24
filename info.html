@@ -4,10 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trip Keliling Jogja</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/dist/css/bootstrap.min.css"
-    />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css" />
+    <!-- slick slider -->
+    <link rel="stylesheet" href="plugins/slick/slick.css" />
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css" />
+    <!-- animation css -->
+    <link rel="stylesheet" href="plugins/animate/animate.css" />
+    <!-- aos -->
+    <link rel="stylesheet" href="plugins/aos/aos.css" />
+    <!-- venobox popup -->
+    <link rel="stylesheet" href="plugins/venobox/venobox.css" />
+
+    <!-- Main Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -116,11 +128,7 @@
   <body>
     <div class="container main-container">
       <div class="logo-wrapper">
-        <img
-          src="images/logo2.png"
-          alt="Logo"
-          class="rounded-circle profile-logo"
-        />
+        <img src="images/logo2.png" alt="Logo" class="profile-logo" />
       </div>
 
       <div class="link-card">
@@ -140,7 +148,7 @@
           <i class="fas fa-globe"></i> Kunjungi Website
         </a>
         <a
-          href="https://tiktok.com/mainbareng.id"
+          href="https://www.tiktok.com/@mainbareng.id"
           class="btn btn-custom btn-pink"
           target="_blank"
         >
@@ -155,10 +163,36 @@
           <i class="fab fa-instagram"></i> Instagram
         </a>
 
-        <a href="#" class="btn btn-custom btn-orange" target="_blank">
+        <a
+          id="button-toggle-testimoni-pelanggan"
+          class="btn btn-custom btn-orange"
+          target="_blank"
+        >
           <i class="far fa-heart"></i> Testimoni
         </a>
       </div>
     </div>
+    <div
+      id="testimoni-pelanggan-info"
+      class="mt-4 pt-4"
+      style="border-top: 1px solid #f8941e"
+    >
+      <h5 class="text-center mb-4 font-weight-bold" style="color: #f8941e">
+        Testimoni Pelanggan
+      </h5>
+
+      <div
+        id="testimoni-pelanggan-list-info"
+        class="row justify-content-center"
+        style="padding-left: 25px; padding-right: 25px"
+      ></div>
+    </div>
+
+    <!-- Main Script -->
+    <!-- jQuery -->
+    <script src="plugins/jQuery/jquery.min.js"></script>
+    <!-- slick slider -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -563,6 +563,71 @@
   }
   appenddocumentaryPackageData();
 
+  function appendTestimoniData() {
+    let data = [
+      {
+        message: `Kami mengucapkan terimakasih kepada kepada crew mainbareng.id
+                  yang sudah membersamai kami dan memberikan pelayanan yang
+                  memuaskan`,
+        photo: 'images/reviewers/review1.png',
+        name: 'SD Muhammadiyah Al Mukhlisin',
+        tripName: 'Trip 5D4N'
+      },
+      {
+        message: `Pelayanan memuaskan, driver nya oke dan sangat welcome
+                  menemani keluarga dan anak-anak. Overall kami sangat puas
+                  degan pelayanan mainbareng.id.`,
+        photo: 'images/reviewers/review2.png',
+        name: 'Testimoni Pelanggan',
+        tripName: 'Trip 4D3N'
+      }
+    ];
+
+    for (let index = 0; index < data.length; index++) {
+      const item = data[index];
+
+      $('#testimoni-pelanggan-list-info').append(`
+        <div class="col-6 col-lg-4 mb-5">
+          <div class="card p-0 border-primary rounded-0 hover-shadow">
+            <div class="card-body">
+              <div class="col-12 mb-4 text-center">
+                <p class="font-italic text-muted mb-2 px-3">
+                  "${item.message}"
+                </p>
+                <div class="mb-3" style="color: #ffc107">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+                <div class="mb-2">
+                  <img
+                    src="${item.photo}"
+                    class="rounded-circle shadow-sm border"
+                    width="80"
+                    height="80"
+                    alt="Siti"
+                  />
+                </div>
+                <h6 class="font-weight-bold mb-0 text-dark">
+                  ${item.name}
+                </h6>
+                <small class="text-secondary">${item.tripName}</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      `);
+    }
+  }
+  appendTestimoniData();
+
+  $(document).ready(function () {
+    $('#testimoni-pelanggan-info').hide();
+    $('#button-toggle-testimoni-pelanggan').click(function () {
+      $('#testimoni-pelanggan-info').slideToggle('slow');
+    });
+  });
+
   $(document).on('click', '#whatsapp-kami', function () {
     window.open(
       'https://api.whatsapp.com/send/?phone=6285600341160&text=Halo+mainbareng.id&type=phone_number&app_absent=0'
