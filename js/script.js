@@ -576,10 +576,22 @@
       {
         message: `Pelayanan memuaskan, driver nya oke dan sangat welcome
                   menemani keluarga dan anak-anak. Overall kami sangat puas
-                  degan pelayanan mainbareng.id.`,
+                  dengan pelayanan mainbareng.id.`,
         photo: 'images/reviewers/review2.png',
         name: 'Testimoni Pelanggan',
         tripName: 'Trip 4D3N'
+      },
+      {
+        message: `Bagus2 pantainya kak, penjemputan sesuai jam. Driver aman enak bawa mobil. Cuman agak nyesel gak ambil + Fotografer paketnya`,
+        photo: 'images/reviewers/review3.jpeg',
+        name: 'Kak Wika',
+        tripName: '-'
+      },
+      {
+        message: `Driver is flexible, very informative, cater to out needs, ⁠navigate expert, friendly and approachable and the ⁠vehicle is spacious clean. My suggestion is include more of shooping itinerary`,
+        photo: 'images/reviewers/review4.jpeg',
+        name: 'Kak Nur from Singapore',
+        tripName: '-'
       }
     ];
 
