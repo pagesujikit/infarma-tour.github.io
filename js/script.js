@@ -585,13 +585,55 @@
         message: `Bagus2 pantainya kak, penjemputan sesuai jam. Driver aman enak bawa mobil. Cuman agak nyesel gak ambil + Fotografer paketnya`,
         photo: 'images/reviewers/review3.jpeg',
         name: 'Kak Wika',
-        tripName: '-'
+        tripName: 'Trip 1 hari'
       },
       {
         message: `Driver is flexible, very informative, cater to out needs, ⁠navigate expert, friendly and approachable and the ⁠vehicle is spacious clean. My suggestion is include more of shooping itinerary`,
         photo: 'images/reviewers/review4.jpeg',
         name: 'Kak Nur from Singapore',
-        tripName: '-'
+        tripName: 'Trip 4D3N'
+      },
+      {
+        message: `kami senang juga sama team mainbareng.id, orangnya humble enak diajak bicara dan mau terus mengantarkan kami kemana-mana.`,
+        photo: 'images/reviewers/review5-nisa.jpeg',
+        name: 'Kak nisa',
+        tripName: 'Trip 6D5N'
+      },
+      {
+        message: `Terima Kasih bangat udah accommodate to request kami.. mohon maaf sebab ada hari harus ditukar destinasi.. semuanya baik2 aja.. Nggak ada salahnya.. Kami jugak mohon maaf klau ada joking yg kasar… Selamat Maju Jaya buat mainbareng.id dan kamu ya Tama.. ada kesempatan kita jumpe lagy. Klau dtg ke singapura kasi tahu..`,
+        photo: 'images/reviewers/review6-lulu.jpeg',
+        name: 'Kak lulu Singapore',
+        tripName: '5D4N'
+      },
+      {
+        message: `Baik mas agil orangnya. saya juga suka, orangnya enak diajak bicara. Nanti klo kami liburan in syaa allah kada bajaraan pakai jasa mainbareng.id`,
+        photo: 'images/reviewers/review5-nisa.jpeg',
+        name: 'Kak nisa (2)',
+        tripName: '5D4N'
+      },
+      {
+        message: `Okay semuanya dan pasti akan kembali ke jogja lagi. Sama juga yaaa tama. Maaf jika ada salah dan silap selama kami dgn tama. InshaAllah jmpa lagi di lain hari`,
+        photo: 'images/reviewers/review7-siti.jpeg',
+        name: 'Kak siti from Malaysia',
+        tripName: '4D3N'
+      },
+      {
+        message: `Selamat pagi. Baik2 saja. Pak Andika baik sekali dengan kita. Hari ini pak Andika akan start jam 9. Terima kasih pak.`,
+        photo: 'images/logo2.png',
+        name: 'Ibu wiwien',
+        tripName: '3D2N'
+      },
+      {
+        message: `Mlm mas maaf baru respon.. Saya baru sampai denpasar bali..alhamdulillah kami sdh sampai..utk kesannya mantap mas..pelayanan driver juga bagus dan menyenangkan..insha allah trip berikut ya kami hubungi mas tama lagi.. Terima kasih..🙏`,
+        photo: 'images/reviewers/review8-rahman.jpeg',
+        name: 'Pak rahman batam',
+        tripName: '4D3N'
+      },
+      {
+        message: `keren, Klo ad yg tanya saya bantu rekomendasikan join trip sma mainbareng.id`,
+        photo: 'images/reviewers/review9-eka.jpeg',
+        name: 'Kak Eka ns',
+        tripName: '1 day'
       }
     ];
 
